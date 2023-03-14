@@ -2,7 +2,7 @@ from googletrans import Translator
 
 translator = Translator()
 language_list = ["en", "it", "es", "fr", "tr", "nl", "de", "pt"]
-
+#language that you want to use now
 
 def new_translation(input_to_translate):
     result = []
