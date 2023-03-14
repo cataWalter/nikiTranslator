@@ -1,14 +1,10 @@
 from googletrans import Translator
 
 translator = Translator()
+language_list = ["en", "it", "es", "fr", "tr", "nl", "de", "pt"]
 
 
 def new_translation(input_to_translate):
-    all = ["en", "it", "es", "fr", "tr", "nl", "ca", "de", "pt", "hu", "zh-cn"]
-    meaningful = ["en", "es", "fr"]
-    normal_chat = ["es", "fr", "tr", "nl", "de", "pt"]
-    language_list = meaningful
-    language_list.sort()
     result = []
     for language in language_list:
         translation = translator.translate(input_to_translate, language)
@@ -16,18 +12,14 @@ def new_translation(input_to_translate):
         print(language + ":   " + translation.text)
     return result
 
-def new_string_translation(input_to_translate):
-    all = ["en", "it", "es", "fr", "tr", "nl", "ca", "de", "pt", "hu"]
-    meaningful = ["en", "es", "fr"]
-    normal_chat = ["es", "fr", "tr", "nl", "de", "pt"]
-    language_list = all
-    language_list.sort()
-    result = ""
-    for language in language_list:
-        translation = translator.translate(input_to_translate, language)
-        result = result + language + "\t" + translation.text + "\n"
-    return result
 
+while True:
+    print("Insert new sentence to translate:")
+    input_to_translate = input()
+    new_translation(input_to_translate)
+    print()
+
+    
 """
 LANGUAGES = {
     'af': 'afrikaans',

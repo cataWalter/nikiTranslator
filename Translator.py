@@ -137,7 +137,6 @@ class Ui_HCI(object):
         self.label.setText(_translate("HCI", "TRANSLATOR"))
 
     def languagesel(self, lang):
-
         if lang == 'Afrikaans':
             return 'af'
         elif lang == 'Arabic':
